@@ -1,7 +1,7 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      iniciar sesión
+      iniciar sesión {{nombreUsuario}} 
     </ion-title>
   </ion-toolbar>
 </ion-header>
@@ -17,7 +17,8 @@
   <!--EMAIL-->
   <br>
   <div>
-    <ion-input style="align-items: center; width: 500px;" type="email" label="Correo:" label-placement="floating"
+    <!--el ngModel es para guardar los datos de lo que ingresa el usuario-->
+    <ion-input style="align-items: center; width: 500px;" type="email" [(ngModel)]="user1" label="Correo:" label-placement="floating"
       fill="outline" placeholder="Ingrese su nombre"></ion-input>
   </div>
 
@@ -33,7 +34,9 @@
 
   <div>
     <!--BOTONES-->
-    <ion-button color="dark" [routerLink]="['/pagina1']">INGRESAR</ion-button> <br>
+    <!--<ion-button color="dark" [routerLink]="['/pagina1']">INGRESAR {{user1}}</ion-button> <br>-->
+<!--estos son los eventos, este es para redireccionar cuando se espera algo-->
+    <ion-button color="dark" (click) ="iniciar_sesion()" >INGRESAR {{user1}}</ion-button>
 
   </div>
 </ion-content>
