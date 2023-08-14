@@ -1,0 +1,65 @@
+<ion-header [translucent]="true">
+  <ion-toolbar class="">
+    <ion-buttons slot="start">
+      <ion-back-button default-href="#"></ion-back-button>
+    </ion-buttons>
+    <ion-title>pagina 1</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<style>
+  div {
+    display: flex;
+    justify-content: center;
+  }
+/**
+esto es para cambiar el fondo a los botones
+  .hello {  
+    background-color: #005C53;
+  }
+
+esto es para cambiar el fondo de la pantalla  
+  .fondo {
+    --ion-background-color: rgb(66, 13, 71);
+  }
+
+  
+aqui es para cambiarle el color a los input (cuadros de texto)
+
+  ion-input{
+    background-color: #000000;
+  }
+  **/
+</style>
+
+<ion-content class="fondo" [fullscreen]="true">
+  <ion-header collapse="condense"></ion-header>
+  <br>
+  <br>
+  <div>
+    <ion-input style="align-items: center; width: 500px;" type="text" label="Nombre:" label-placement="floating"
+      fill="outline" placeholder="Ingrese su nombre"></ion-input>
+  </div>
+
+  <br>
+  <br>
+  <div>
+    <ion-input class="custom-input" style="align-items: center; width: 500px;" type="text" label="Apellido:"
+      label-placement="floating" fill="outline" placeholder="Ingrese su apellido"></ion-input>
+  </div>
+
+  <br>
+  <br>
+  <div>
+    <ion-input style="align-items: center; width: 500px;" type="text" label="Rut:" label-placement="floating"
+      fill="outline" placeholder="Ingrese su rut"></ion-input>
+  </div>
+
+  <br>
+
+  <div>
+    <ion-button class="hello" color="dark"   [routerLink]="['/home']">cerrar</ion-button>
+    <ion-button class="hello" color="dark"  [routerLink]="['/pagina2']">pagina 2</ion-button>
+  </div>
+
+</ion-content>

@@ -1,0 +1,39 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      iniciar sesión
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<style>
+  div {
+    display: flex;
+    justify-content: center;
+  }
+</style>
+
+<ion-content [fullscreen]="true"><ion-header collapse="condense"></ion-header>
+  <!--EMAIL-->
+  <br>
+  <div>
+    <ion-input style="align-items: center; width: 500px;" type="email" label="Correo:" label-placement="floating"
+      fill="outline" placeholder="Ingrese su nombre"></ion-input>
+  </div>
+
+
+  <br>
+  <div>
+    <!--CONTRASEÑA-->
+    <ion-input style="align-items: center; width: 500px;" type="password" label="Clave:" label-placement="floating"
+      fill="outline" placeholder="Ingrese su contraseña"></ion-input>
+  </div>
+
+
+
+  <div>
+    <!--BOTONES-->
+    <ion-button color="dark" [routerLink]="['/pagina1']">INGRESAR</ion-button> <br>
+
+  </div>
+</ion-content>
