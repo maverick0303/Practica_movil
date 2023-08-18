@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Router } from '@angular/router';
+import { NavigationExtras, Router } from '@angular/router';
 import { AlertController, ToastController } from '@ionic/angular';
 
 @Component({
@@ -39,6 +39,17 @@ export class HomePage {
     this.presentAlert();
     //alerta no intrusiva;
     this.presentToast();
+    //pasar datos de una pagina a otra: (esto esa como las variables de contexto)
+    let navigationExtras: NavigationExtras = {
+      state:{
+        //aqui se crean los pares ordenados:
+        userEnviado: this.user1, 
+        claveEnviada: this.clave
+        
+      }
+    }
+    //se debe de colocar esto abajo de las variables de contexto cuando se tenga que redirigir
+    this.router.navigate(['/pagina1'], navigationExtras);
   }
 
   //aqui es para los mensajes de alerta intrusiva:

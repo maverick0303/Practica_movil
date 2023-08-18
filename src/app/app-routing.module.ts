@@ -19,6 +19,12 @@ const routes: Routes = [
     path: 'pagina2',
     loadChildren: () => import('./pages/pagina2/pagina2.module').then( m => m.Pagina2PageModule)
   },
+  {
+    //para que se redirija a una pagina que no existe se coloca dos asteriscos.
+    path: '**',
+    loadChildren: () => import('./pages/notfound/notfound.module').then( m => m.NotfoundPageModule)
+  },
+
 ];
 
 @NgModule({
