@@ -8,6 +8,8 @@ import { AlertController, ToastController } from '@ionic/angular';
   styleUrls: ['home.page.scss'],
 })
 export class HomePage {
+  //si se cumple la condicion se muestra o oculta la información
+  edad: number =12;
   //string
   nombreUsuario: string = "Maria";
   //esto es solo un valor predetermiundo, no merece una declaracion.

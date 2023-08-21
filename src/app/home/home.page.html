@@ -4,7 +4,7 @@
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
     <ion-title>
-      iniciar sesión {{nombreUsuario}} 
+      iniciar sesión {{nombreUsuario}}
     </ion-title>
   </ion-toolbar>
 
@@ -22,8 +22,8 @@
   <br>
   <div>
     <!--el ngModel es para guardar los datos de lo que ingresa el usuario-->
-    <ion-input style="align-items: center; width: 500px;" type="email" [(ngModel)]="user1" label="Correo:" label-placement="floating"
-      fill="outline" placeholder="Ingrese su nombre"></ion-input>
+    <ion-input style="align-items: center; width: 500px;" type="email" [(ngModel)]="user1" label="Correo:"
+      label-placement="floating" fill="outline" placeholder="Ingrese su nombre"></ion-input>
   </div>
 
 
@@ -39,8 +39,11 @@
   <div>
     <!--BOTONES-->
     <!--<ion-button color="dark" [routerLink]="['/pagina1']">INGRESAR {{user1}}</ion-button> <br>-->
-<!--estos son los eventos, este es para redireccionar cuando se espera algo-->
-    <ion-button color="dark" (click) ="iniciar_sesion()" >INGRESAR {{user1}}</ion-button>
+    <!--estos son los eventos, este es para redireccionar cuando se espera algo-->
+    <ion-button *ngIf="edad < 20" color="dark" (click)="iniciar_sesion()">INGRESAR {{user1}}</ion-button>
 
   </div>
+  <!--Aqui se agregan los componenetes html. Se llama como el selector, y se debe de importar-->
+  <!--aqui se pasa el dato-->
+  <app-componente1 nombre="MARIAAAAAAAAAA"></app-componente1>
 </ion-content>

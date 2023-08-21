@@ -5,6 +5,7 @@ import { FormsModule } from '@angular/forms';
 import { HomePage } from './home.page';
 
 import { HomePageRoutingModule } from './home-routing.module';
+import { Componente1Component } from '../components/componente1/componente1.component';
 
 
 @NgModule({
@@ -14,6 +15,7 @@ import { HomePageRoutingModule } from './home-routing.module';
     IonicModule,
     HomePageRoutingModule
   ],
-  declarations: [HomePage]
+  /**aqui se agrega el componenete para que se muestre en la pagina por a cual lo incluiste **/
+  declarations: [HomePage, Componente1Component]
 })
-export class HomePageModule {}
+export class HomePageModule { }
