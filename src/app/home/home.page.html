@@ -11,6 +11,22 @@
 </ion-header>
 
 <style>
+  .container {
+  flex-direction: column;
+}
+
+.track {
+  width: 344px;
+  background: var(--ion-color-medium);
+  padding: 16px;
+}
+
+ion-card {
+  width: 100px;
+  box-shadow: none;
+  margin: 0px;
+}
+
   div {
     display: flex;
     justify-content: center;
@@ -18,6 +34,35 @@
 </style>
 
 <ion-content [fullscreen]="true"><ion-header collapse="condense"></ion-header>
+
+  <ion-item *ngFor="let x of lista">
+    <ion-label>{{x.nombre | lowercase}} {{x.apellido}} - {{x.edad | number:"1.0-2"}}
+      <ion-label>
+        <td>El nombre Jose empieza con la letra {{x.nombre | slice:0:1}} los dos tienen {{ x.dinero | currency}} en la cuenta</td>
+        <td>los dos nacieron el {{x.hoy | date:"dd MMMM yyyy"}}</td> 
+        
+      </ion-label>
+      <ion-checkbox>¿Aceptas compartir tus datos personales?</ion-checkbox>
+      
+    </ion-label>
+
+  </ion-item>
+  <div class="container">
+    <div class="track">
+      <ion-card id="card" button="true">
+        <ion-card-content>
+          
+        </ion-card-content>
+      </ion-card>
+    </div>
+  
+    <p>Drag the square along the track.</p>
+  </div>
+
+  <app-componente1 [nombre]="nombreUsuario"></app-componente1>
+  
+  
+
   <!--EMAIL-->
   <br>
   <div>

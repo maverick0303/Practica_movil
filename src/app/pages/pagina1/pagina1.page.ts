@@ -10,6 +10,25 @@ export class Pagina1Page implements OnInit {
   //se crean dos variables:
   usuarioR: string = "";
   claveR: string ="";
+
+  lista: any = [
+    {
+      nombre: "Jorenzo",
+      apellido: "Guevara",
+      edad: 23,
+      dinero:1000,
+      hoy:2582023
+
+    },
+    {
+      nombre: "Jose",
+      apellido: "Perez",
+      edad: 23,
+      dinero:1000,
+      hoy:2582023
+
+    }
+  ]
 //estas son las librerias que se necesitan para recibir las variables:
   constructor(private router: Router, private activeRouter: ActivatedRoute) { 
     //esto es para que se reciban la informacion que se le envie:

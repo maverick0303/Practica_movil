@@ -9,6 +9,22 @@
 </ion-header>
 
 <style>
+  .container {
+  flex-direction: column;
+}
+
+.track {
+  width: 344px;
+  background: var(--ion-color-medium);
+  padding: 16px;
+}
+
+ion-card {
+  width: 100px;
+  box-shadow: none;
+  margin: 0px;
+}
+
   div {
     display: flex;
     justify-content: center;
@@ -35,33 +51,29 @@ aqui es para cambiarle el color a los input (cuadros de texto)
 
 <ion-content class="fondo" [fullscreen]="true">
   <ion-header collapse="condense"></ion-header>
-  <br>
-  <br>
-  <div>
-    <ion-input style="align-items: center; width: 500px;" type="text" label="Nombre:" label-placement="floating"
-      fill="outline" placeholder="Ingrese su nombre"></ion-input>
-  </div>
+  <ion-item *ngFor="let x of lista">
+    <ion-label>{{x.nombre | lowercase}} {{x.apellido}} - {{x.edad | number:"1.0-2"}}
+      <ion-label>
+        <td>El nombre Jose empieza con la letra {{x.nombre | slice:0:1}}</td><br>
+        <td>los dos tienen {{ x.dinero | currency}} en la cuenta</td><br>
+        <td>los dos nacieron el {{x.hoy | date:"dd MMMM yyyy"}}</td> 
+        
+      </ion-label>
+      <ion-checkbox>¿Aceptas compartir sus datos personales?</ion-checkbox>
+      
+    </ion-label>
 
-  <br>
-  <br>
-  <div>
-    <ion-label></ion-label>
-    <ion-input class="custom-input" style="align-items: center; width: 500px;" type="text" label="Apellido:"
-      label-placement="floating" fill="outline" placeholder="Ingrese su apellido">{{usuarioR}}</ion-input>
-  </div>
-
-  <br>
-  <br>
-  <div>
-    <ion-input style="align-items: center; width: 500px;" type="text" label="Rut:" label-placement="floating"
-      fill="outline" placeholder="Ingrese su rut"></ion-input>
-  </div>
-
-  <br>
-
-  <div>
-    <ion-button class="hello" color="dark"   [routerLink]="['/home']">cerrar</ion-button>
-    <ion-button class="hello" color="dark"  [routerLink]="['/pagina2']">pagina 2</ion-button>
+  </ion-item>
+  <div class="container">
+    <div class="track">
+      <ion-card id="card" button="true">
+        <ion-card-content>
+          
+        </ion-card-content>
+      </ion-card>
+    </div>
+  
+    <p>mueve.</p>
   </div>
 
 </ion-content>

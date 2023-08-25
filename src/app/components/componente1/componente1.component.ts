@@ -7,7 +7,7 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class Componente1Component  implements OnInit {
   /**aqui se debe de importar lo que vas a mostrar, se llama inyector */
-  @Input()nombre: string ="";
+  @Input()nombre: string ="hola";
   constructor() { }
 
   ngOnInit() {}
