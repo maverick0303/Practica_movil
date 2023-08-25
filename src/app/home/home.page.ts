@@ -10,10 +10,6 @@ import { Pagina1Page } from '../pages/pagina1/pagina1.page';
   
 })
 export class HomePage {
-<<<<<<< Updated upstream
-=======
-
->>>>>>> Stashed changes
   
   //si se cumple la condicion se muestra o oculta la información
   edad: number =12;
@@ -24,7 +20,7 @@ export class HomePage {
   //esto es un arreglo y no se debe de declarar nada porque es una variable golbar.
   lista: any = [
     {
-<<<<<<< Updated upstream
+
       nombre: "Mario",
       apellido: "Guevara",
       edad:24
@@ -35,21 +31,8 @@ export class HomePage {
       nombre: "Lorenzo",
       apellido: "Guevara",
       edad:24.545648
-=======
-      nombre: "Jorenzo",
-      apellido: "Guevara",
-      edad: 23,
-      dinero:1000,
-      hoy:2582023
 
-    },
-    {
-      nombre: "Jose",
-      apellido: "Perez",
-      edad: 23,
-      dinero:1000,
-      hoy:2582023
->>>>>>> Stashed changes
+
 
     }
   ]
