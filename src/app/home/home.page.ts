@@ -1,13 +1,16 @@
 import { Component } from '@angular/core';
 import { NavigationExtras, Router } from '@angular/router';
-import { AlertController, ToastController } from '@ionic/angular';
+import { AlertController, NavController, ToastController } from '@ionic/angular';
+import { Pagina1Page } from '../pages/pagina1/pagina1.page';
 
 @Component({
   selector: 'app-home',
   templateUrl: 'home.page.html',
   styleUrls: ['home.page.scss'],
+  
 })
 export class HomePage {
+  
   //si se cumple la condicion se muestra o oculta la información
   edad: number =12;
   //string
@@ -17,14 +20,23 @@ export class HomePage {
   //esto es un arreglo y no se debe de declarar nada porque es una variable golbar.
   lista: any = [
     {
+      nombre: "Mario",
+      apellido: "Guevara",
+      edad:24
+
+    },
+    //aqui estara otra lista y verificar si el for muestra los dos datos:
+    {
       nombre: "Lorenzo",
-      apellido: "Guevara"
+      apellido: "Guevara",
+      edad:24.545648
 
     }
   ]
   //esto es una prueba
   user1: string = "";
   constructor(private router: Router,  private alertController: AlertController, private toastController: ToastController) { }
+//aqui es lo del pasado de datos a una pagina:
 
   sumar() {
     //el this es para indicar que es una clave propia de la clase.

@@ -6,6 +6,9 @@ import { HomePage } from './home.page';
 
 import { HomePageRoutingModule } from './home-routing.module';
 import { Componente1Component } from '../components/componente1/componente1.component';
+//aqui se importa el diseño, aquoi pusimos el de la carga
+import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
+
 
 
 @NgModule({
@@ -13,7 +16,8 @@ import { Componente1Component } from '../components/componente1/componente1.comp
     CommonModule,
     FormsModule,
     IonicModule,
-    HomePageRoutingModule
+    HomePageRoutingModule,
+    MatProgressSpinnerModule,
   ],
   /**aqui se agrega el componenete para que se muestre en la pagina por a cual lo incluiste **/
   declarations: [HomePage, Componente1Component]

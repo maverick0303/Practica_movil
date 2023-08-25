@@ -45,5 +45,12 @@
   </div>
   <!--Aqui se agregan los componenetes html. Se llama como el selector, y se debe de importar-->
   <!--aqui se pasa el dato-->
-  <app-componente1 nombre="MARIAAAAAAAAAA"></app-componente1>
+  <app-componente1 nombre="user1"></app-componente1>
+  <!--mostrar el for-->
+  <ion-item *ngFor="let x of lista">
+    <ion-label>{{x.nombre | uppercase}} - {{x.edad | number:"1.0-2"}}</ion-label>
+  </ion-item>
+  <!--aqui esta la carga-->
+  <mat-spinner></mat-spinner>
+
 </ion-content>
