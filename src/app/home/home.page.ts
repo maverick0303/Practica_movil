@@ -38,7 +38,10 @@ export class HomePage {
   ]
   //esto es una prueba
   user1: string = "";
-  constructor(private router: Router,  private alertController: AlertController, private toastController: ToastController) { }
+  constructor(private router: Router,  private alertController: AlertController, private toastController: ToastController) {
+    //AQUI SE CONTRUYEN LAS VARIABLKES SI ES QUE QUIERO QUE APAREZCAN ALLI
+    localStorage.setItem('token', this.nombreUsuario);
+   }
 //aqui es lo del pasado de datos a una pagina:
 
   sumar() {

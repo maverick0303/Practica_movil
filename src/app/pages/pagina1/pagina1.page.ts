@@ -10,6 +10,8 @@ export class Pagina1Page implements OnInit {
   //se crean dos variables:
   usuarioR: string = "";
   claveR: string ="";
+  //los any son oara cualquier tipo de dato
+  variableStorage: any ="";
 
   lista: any = [
     {
@@ -31,6 +33,8 @@ export class Pagina1Page implements OnInit {
   ]
 //estas son las librerias que se necesitan para recibir las variables:
   constructor(private router: Router, private activeRouter: ActivatedRoute) { 
+    
+
     //esto es para que se reciban la informacion que se le envie:
     //PROMISE: solo tiene una vida, si se cumple lo que se le pide y ya luego no hace mas nada
     //OBSERVABLE: recibe para tomarla de nuevo si hay un error. 
@@ -47,6 +51,10 @@ export class Pagina1Page implements OnInit {
    }
 
   ngOnInit() {
+    //aqui se captura la variable de local que hiciste
+    this.variableStorage = localStorage.getItem('token');
+    
+
   }
 
 }
